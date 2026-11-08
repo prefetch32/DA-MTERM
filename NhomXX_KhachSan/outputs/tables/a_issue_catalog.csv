@@ -1,0 +1,21 @@
+﻿issue_id,field,issue,detection_rule,affected_rows,example_row_ids
+I01,23 cột nghiệp vụ,Bản ghi trùng tuyệt đối,"duplicated(subset=23 cột, keep='first')",180,R00608; R00887; R00980; R01389; R01466
+I02,booking_id,Mã đặt phòng có khoảng trắng/chữ thường,booking_id khác strip().upper(),215,R00096; R00110; R00236; R00329; R00406
+I03,hotel,Biến thể tên khách sạn,Nhãn không đúng chính tả chuẩn City Hotel / Resort Hotel,195,R00010; R00054; R00055; R00063; R00074
+I04,meal,Biến thể gói bữa ăn hoặc Undefined,meal không thuộc BB/HB/FB/SC viết chuẩn hoặc là Undefined,240,R00017; R00036; R00041; R00074; R00078
+I05,market_segment,Biến thể nhãn phân khúc/Undefined,"market_segment có khác biệt chữ hoa, dấu câu, khoảng trắng hoặc Undefined",10244,R00001; R00002; R00003; R00004; R00005
+I06,distribution_channel,Biến thể nhãn kênh/Undefined,"distribution_channel có nhãn khác chuẩn TA/TO, Direct, Corporate, GDS",67,R00020; R00091; R00314; R00496; R00546
+I07,deposit_type,Biến thể nhãn loại đặt cọc,deposit_type không trùng một trong ba nhãn chuẩn,78,R00003; R00220; R00365; R00606; R00722
+I08,customer_type,Biến thể nhãn loại khách,customer_type có dấu câu/viết hoa/khoảng trắng không chuẩn,81,R00154; R00419; R00459; R00517; R00715
+I09,reservation_status,Ngày nằm nhầm cột trạng thái,reservation_status khớp YYYY-MM-DD; chỉ chuyển nếu cột ngày trạng thái rỗng,26,R00141; R00331; R00390; R00499; R00822
+I10,arrival_date,Ngày đến sai định dạng/ngày không tồn tại,Không đọc được bằng 4 format được phép hoặc ngày ngoài miền 2015-07-01..2017-08-31,24,R00030; R00169; R00888; R01471; R02570
+I11,arrival_date,Ngày đến dùng định dạng không phải ISO,Chuỗi không khớp YYYY-MM-DD; cần đọc theo format tường minh,1970,R00005; R00011; R00014; R00015; R00019
+I12,lead_time,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,10,R00746; R00780; R01258; R03560; R06818
+I13,stays_in_weekend_nights,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,15,R00068; R00645; R01950; R02219; R02565
+I14,stays_in_week_nights,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,16,R00215; R00663; R01031; R01865; R02246
+I15,adults,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,0,
+I16,children,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,15,R00097; R00773; R01751; R01805; R01954
+I17,babies,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,0,
+I18,adr,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,131,R00081; R00432; R00549; R00601; R00663
+I19,total_of_special_requests,Giá trị số có hậu tố/tiền tệ/dấu phẩy/không phải số,Giá trị cần chuẩn hóa rồi kiểm tra kiểu và miền,0,
+I20,country,"Quốc gia viết đầy đủ, sai hoa-thường/khoảng trắng hoặc ký hiệu thiếu",country không phải mã 2-3 chữ in hoa hoặc tên quốc gia được ánh xạ,270,R00065; R00236; R00268; R00273; R00275
